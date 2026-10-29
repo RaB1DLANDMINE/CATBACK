@@ -57,18 +57,18 @@ CATBACK doesn't need the app *installed* — it only needs the APK file:
 
 ## Requirements
 
-- A phone running **petalOS** (version X or later) (You CAN use CatBack on other ROMs but various features will be limited due to system restrictions.)
+- A phone running **petalOS** (version 1.0.1 or later) (You CAN use CATBACK on other ROMs but various features will be limited due to system restrictions.)
 - An **Android Auto APK** file (not installed — just the file)
 - A car or aftermarket head unit with **Android Auto** support
 - A decent USB cable (seriously, it matters)
 
 ## Installation
 
-1. Grab the latest CATBACK release from the [Releases](../../releases) page.
+1. Grab the latest CATBACK release from the [Releases](../../releases) page. (Stock petalOS includes CATBACK but may need updating.)
 2. Install it on your petalOS device.
 3. Open CATBACK and select your Android Auto APK when prompted.
 4. Wait for CATBACK to extract what it needs.
-5. Plug into your car. 🚗
+5. Plug into your car. Or be lazy and use bluetooth. 
 
 ### Building from source
 
