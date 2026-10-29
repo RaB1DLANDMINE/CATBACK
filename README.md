@@ -9,7 +9,7 @@
 ![Platform](https://img.shields.io/badge/platform-petalOS-ff6f61)
 ![Google Apps](https://img.shields.io/badge/Google%20apps%20required-0-success)
 ![Necessity](https://img.shields.io/badge/necessity-100%25-blueviolet)
-![License](https://img.shields.io/badge/license-TBD-lightgrey)
+![License](https://img.shields.io/badge/license-GPLv3-blue)
 
 </div>
 
