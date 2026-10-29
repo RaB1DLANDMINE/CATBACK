@@ -93,7 +93,7 @@ No. That's the whole point.
 If your car supports Android Auto, probably. Open an issue with your make, model and head unit if it doesn't.
 
 **Why is it called CATBACK?**
-_Add your explanation here._
+_cause car._
 
 ## Contributing
 
