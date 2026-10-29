@@ -1,6 +1,8 @@
 <div align="center">
 
-# 🐱 CATBACK
+<img src="assets/catback-icon/svg/colour/catback-icon-dark.svg" alt="CATBACK icon" width="140">
+
+# CATBACK
 
 ### An Android Auto replacement that was 100% necessary.
 
@@ -94,6 +96,35 @@ If your car supports Android Auto, probably. Open an issue with your make, model
 
 **Why is it called CATBACK?**
 _cause car._
+
+## Logos
+
+The CATBACK icon is a burnt-titanium Y-piece: one pipe in, two tips out. Every variant (SVG, PNG from 16 to 1024 px, and Android adaptive icons) lives in [`assets/catback-icon`](assets/catback-icon).
+
+<table>
+  <tr>
+    <th>Colour</th>
+    <th>Fill</th>
+    <th>Outline</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/catback-icon/svg/colour/catback-glyph-transparent.svg" alt="CATBACK colour logo" width="120">
+    </td>
+    <td align="center">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/catback-icon/svg/mono/catback-mono-white.svg">
+        <img src="assets/catback-icon/svg/mono/catback-mono-black.svg" alt="CATBACK fill logo" width="120">
+      </picture>
+    </td>
+    <td align="center">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/catback-icon/svg/outline/catback-outline-white.svg">
+        <img src="assets/catback-icon/svg/outline/catback-outline-black.svg" alt="CATBACK outline logo" width="120">
+      </picture>
+    </td>
+  </tr>
+</table>
 
 ## Contributing
 
