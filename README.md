@@ -107,14 +107,12 @@ PRs and issues are welcome. If you're reporting a bug, please include:
 
 ## Disclaimer
 
-CATBACK is an independent project and is not affiliated with, endorsed by, or sponsored by Google or Huawei. Android Auto is a trademark of Google LLC. Users are responsible for obtaining the Android Auto APK themselves and for complying with the laws and terms that apply to them.
+CATBACK is an independent project and is not affiliated with, endorsed by, or sponsored by Google. Android Auto is a trademark of Google LLC. Users are responsible for obtaining the Android Auto APK themselves and for complying with the laws and terms that apply to them.
 
 ## License
 
-_TBD — add your license here._
+CATBACK is free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License v3.0](LICENSE) as published by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful, but **without any warranty**; without even the implied warranty of merchantability or fitness for a particular purpose. See the [LICENSE](LICENSE) file for details.
 
 ---
-
-<div align="center">
-Made with questionable necessity. 🐱
-</div>
