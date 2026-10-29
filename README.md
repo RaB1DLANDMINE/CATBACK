@@ -43,14 +43,6 @@ CATBACK doesn't need the app *installed* — it only needs the APK file:
 
 > **Note:** CATBACK does not bundle or redistribute any Google files. You provide your own APK.
 
-```
- ┌─────────────────┐      USB / Wi-Fi       ┌──────────────┐
- │ petalOS phone   │ ◀───────────────────▶  │  Car head    │
- │  └─ CATBACK     │   Android Auto proto   │  unit        │
- │      └─ creds ◀─┼── extracted from your  └──────────────┘
- │         APK     │   (uninstalled) APK
- └─────────────────┘
-```
 
 ## Features
 
@@ -65,7 +57,7 @@ CATBACK doesn't need the app *installed* — it only needs the APK file:
 
 ## Requirements
 
-- A phone running **petalOS** (version X or later)
+- A phone running **petalOS** (version X or later) (You CAN use CatBack on other ROMs but various features will be limited due to system restrictions.)
 - An **Android Auto APK** file (not installed — just the file)
 - A car or aftermarket head unit with **Android Auto** support
 - A decent USB cable (seriously, it matters)
