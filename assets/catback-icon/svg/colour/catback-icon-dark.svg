@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="1024" height="1024"><defs>
+<linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#24252D"/><stop offset="1" stop-color="#0D0E12"/></linearGradient>
+<linearGradient id="tileLight" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FBF8FD"/><stop offset="1" stop-color="#E6DFF0"/></linearGradient>
+<linearGradient id="col" gradientUnits="userSpaceOnUse" x1="0" y1="120" x2="0" y2="364">
+<stop offset="0" stop-color="#7A68D6"/><stop offset="0.4" stop-color="#B98BD8"/>
+<stop offset="0.7" stop-color="#E39AB6"/><stop offset="1" stop-color="#F0D08A"/></linearGradient>
+<linearGradient id="shade" gradientUnits="userSpaceOnUse" x1="120" y1="0" x2="300" y2="0">
+<stop offset="0" stop-color="#000" stop-opacity="0.4"/><stop offset="0.16" stop-color="#fff" stop-opacity="0.45"/>
+<stop offset="0.4" stop-color="#000" stop-opacity="0.35"/><stop offset="0.5" stop-color="#000" stop-opacity="0.1"/>
+<stop offset="0.6" stop-color="#000" stop-opacity="0.35"/><stop offset="0.76" stop-color="#fff" stop-opacity="0.45"/>
+<stop offset="1" stop-color="#000" stop-opacity="0.4"/></linearGradient>
+
+<clipPath id="bodyClip"><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z"/></clipPath>
+<linearGradient id="cyl" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#000" stop-opacity="0.62"/>
+<stop offset="0.1" stop-color="#000" stop-opacity="0.3"/>
+<stop offset="0.24" stop-color="#fff" stop-opacity="0.2"/>
+<stop offset="0.31" stop-color="#fff" stop-opacity="0.75"/>
+<stop offset="0.37" stop-color="#fff" stop-opacity="0.18"/>
+<stop offset="0.6" stop-color="#000" stop-opacity="0.12"/>
+<stop offset="0.84" stop-color="#000" stop-opacity="0.5"/>
+<stop offset="0.93" stop-color="#fff" stop-opacity="0.22"/>
+<stop offset="1" stop-color="#000" stop-opacity="0.6"/></linearGradient>
+<linearGradient id="junc" gradientUnits="userSpaceOnUse" x1="120" y1="0" x2="300" y2="0">
+<stop offset="0" stop-color="#000" stop-opacity="0.6"/>
+<stop offset="0.2" stop-color="#fff" stop-opacity="0.45"/>
+<stop offset="0.38" stop-color="#000" stop-opacity="0.15"/>
+<stop offset="0.5" stop-color="#000" stop-opacity="0.4"/>
+<stop offset="0.62" stop-color="#000" stop-opacity="0.2"/>
+<stop offset="0.82" stop-color="#000" stop-opacity="0.45"/>
+<stop offset="1" stop-color="#000" stop-opacity="0.6"/></linearGradient>
+<linearGradient id="fadeTube" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0.8" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="fadeJunc" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.35" stop-color="#fff"/>
+<stop offset="0.75" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="fadeIn" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.25" stop-color="#fff"/></linearGradient>
+<mask id="mTube" maskContentUnits="userSpaceOnUse"><rect x="100" y="100" width="220" height="156" fill="url(#fadeTube)"/></mask>
+<mask id="mJunc" maskContentUnits="userSpaceOnUse"><rect x="100" y="244" width="220" height="70" fill="url(#fadeJunc)"/></mask>
+<mask id="mInlet" maskContentUnits="userSpaceOnUse"><rect x="180" y="294" width="60" height="80" fill="url(#fadeIn)"/></mask>
+<radialGradient id="ao" cx="0.5" cy="0.5" r="0.5">
+<stop offset="0" stop-color="#000" stop-opacity="0.55"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+<linearGradient id="lip" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#000" stop-opacity="0.45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
+<linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FFFFFF"/><stop offset="0.45" stop-color="#DCD2F7"/><stop offset="1" stop-color="#8676BE"/></linearGradient>
+<radialGradient id="mouth" cx="0.5" cy="0.75" r="0.7">
+<stop offset="0" stop-color="#2A1A12"/><stop offset="1" stop-color="#050407"/></radialGradient>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#9A86D8" stop-opacity="0.85"/><stop offset="1" stop-color="#9A86D8" stop-opacity="0"/></linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+<stop offset="0" stop-color="#FFE0B0"/><stop offset="0.5" stop-color="#FF9F5A"/>
+<stop offset="1" stop-color="#FF6A2A" stop-opacity="0"/></radialGradient>
+<linearGradient id="inletRim" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#7A6236"/><stop offset="0.35" stop-color="#F7E2AE"/><stop offset="1" stop-color="#6E5530"/></linearGradient>
+<radialGradient id="drop" cx="0.5" cy="0.5" r="0.5">
+<stop offset="0" stop-color="#000" stop-opacity="0.55"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs><rect width="420" height="420" rx="96" fill="url(#tile)"/><g transform="translate(210 210) scale(1) translate(-210 -242)">
+<ellipse cx="214" cy="370" rx="70" ry="12" fill="url(#drop)"/>
+<path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" fill="url(#col)"/>
+<g clip-path="url(#bodyClip)">
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="72.0"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="67.6"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="63.2"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="58.9"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="54.5"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="50.1"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="45.8"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="41.4"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="37.0"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="32.6"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="28.2"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="23.9"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="19.5"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="15.1"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="10.8"/><path d="M186 360 L186 304 C186 282 120 274 120 242 L120 130 L200 130 L200 228 C200 242 220 242 220 228 L220 130 L300 130 L300 242 C300 274 234 282 234 304 L234 360 A24 8 0 0 1 186 360 Z" stroke="#12062A" stroke-opacity="0.045" stroke-width="6.4"/>
+<path d="M146 124 L146 236 C146 266 198 274 200 306 L200 366" stroke="#fff" stroke-opacity="0.045" stroke-width="27.5"/><path d="M146 124 L146 236 C146 266 198 274 200 306 L200 366" stroke="#fff" stroke-opacity="0.045" stroke-width="25.3"/><path d="M146 124 L146 236 C146 266 198 274 200 306 L200 366" stroke="#fff" stroke-opacity="0.045" stroke-width="23.2"/><path d="M146 124 L146 236 C146 266 198 274 200 306 L200 366" stroke="#fff" stroke-opacity="0.045" stroke-width="21.0"/><path d="M146 124 L146 236 C146 266 198 274 200 306 L200 366" stroke="#fff" stroke-opacity="0.045" stroke-width="18.8"/><path d="M146 124 L146 236 C146 266 198 274 200 306 L200 366" stroke="#fff" stroke-opacity="0.045" stroke-width="16.7"/><path d="M146 124 L146 236 C146 266 198 274 200 306 L200 366" stroke="#fff" stroke-opacity="0.045" stroke-width="14.5"/><path d="M146 124 L146 236 C146 266 198 274 200 306 L200 366" stroke="#fff" stroke-opacity="0.045" stroke-width="12.3"/><path d="M146 124 L146 236 C146 266 198 274 200 306 L200 366" stroke="#fff" stroke-opacity="0.045" stroke-width="10.2"/><path d="M146 124 L146 236 C146 266 198 274 200 306 L200 366" stroke="#fff" stroke-opacity="0.045" stroke-width="8.0"/><path d="M146 124 L146 236 C146 266 198 274 200 306 L200 366" stroke="#fff" stroke-opacity="0.045" stroke-width="5.8"/><path d="M146 124 L146 236 C146 266 198 274 200 306 L200 366" stroke="#fff" stroke-opacity="0.045" stroke-width="3.7"/><path d="M146 124 L146 236 C146 266 198 274 200 306 L200 366" stroke="#fff" stroke-opacity="0.45" stroke-width="2.5"/><path d="M246 124 L246 232" stroke="#fff" stroke-opacity="0.045" stroke-width="27.5"/><path d="M246 124 L246 232" stroke="#fff" stroke-opacity="0.045" stroke-width="25.3"/><path d="M246 124 L246 232" stroke="#fff" stroke-opacity="0.045" stroke-width="23.2"/><path d="M246 124 L246 232" stroke="#fff" stroke-opacity="0.045" stroke-width="21.0"/><path d="M246 124 L246 232" stroke="#fff" stroke-opacity="0.045" stroke-width="18.8"/><path d="M246 124 L246 232" stroke="#fff" stroke-opacity="0.045" stroke-width="16.7"/><path d="M246 124 L246 232" stroke="#fff" stroke-opacity="0.045" stroke-width="14.5"/><path d="M246 124 L246 232" stroke="#fff" stroke-opacity="0.045" stroke-width="12.3"/><path d="M246 124 L246 232" stroke="#fff" stroke-opacity="0.045" stroke-width="10.2"/><path d="M246 124 L246 232" stroke="#fff" stroke-opacity="0.045" stroke-width="8.0"/><path d="M246 124 L246 232" stroke="#fff" stroke-opacity="0.045" stroke-width="5.8"/><path d="M246 124 L246 232" stroke="#fff" stroke-opacity="0.045" stroke-width="3.7"/><path d="M246 124 L246 232" stroke="#fff" stroke-opacity="0.45" stroke-width="2.5"/><path d="M293 126 L293 240 C293 266 230 276 228 304 L228 364" stroke="#fff" stroke-opacity="0.06" stroke-width="8"/><path d="M293 126 L293 240 C293 266 230 276 228 304 L228 364" stroke="#fff" stroke-opacity="0.1" stroke-width="5"/><path d="M293 126 L293 240 C293 266 230 276 228 304 L228 364" stroke="#fff" stroke-opacity="0.22" stroke-width="2.5"/><path d="M193 126 L193 224" stroke="#fff" stroke-opacity="0.06" stroke-width="8"/><path d="M193 126 L193 224" stroke="#fff" stroke-opacity="0.1" stroke-width="5"/><path d="M193 126 L193 224" stroke="#fff" stroke-opacity="0.22" stroke-width="2.5"/>
+</g>
+<ellipse cx="210" cy="238" rx="20" ry="16" fill="url(#ao)" opacity="0.8"/>
+<rect x="120" y="128" width="180" height="22" fill="url(#lip)"/>
+</g>
+
+<clipPath id="mc160"><ellipse cx="160" cy="131" rx="32" ry="10"/></clipPath>
+<ellipse cx="160" cy="130" rx="40" ry="14" fill="url(#rim)"/>
+<ellipse cx="160" cy="130" rx="40" ry="14" fill="none" stroke="#5E4F96" stroke-opacity="0.6" stroke-width="1.5"/>
+<ellipse cx="160" cy="131" rx="32" ry="10" fill="url(#mouth)"/>
+<g clip-path="url(#mc160)">
+<ellipse cx="160" cy="126" rx="32" ry="10" fill="url(#wall)"/>
+<ellipse cx="160" cy="136" rx="24" ry="7" fill="url(#glow)"/>
+</g>
+<clipPath id="mc260"><ellipse cx="260" cy="131" rx="32" ry="10"/></clipPath>
+<ellipse cx="260" cy="130" rx="40" ry="14" fill="url(#rim)"/>
+<ellipse cx="260" cy="130" rx="40" ry="14" fill="none" stroke="#5E4F96" stroke-opacity="0.6" stroke-width="1.5"/>
+<ellipse cx="260" cy="131" rx="32" ry="10" fill="url(#mouth)"/>
+<g clip-path="url(#mc260)">
+<ellipse cx="260" cy="126" rx="32" ry="10" fill="url(#wall)"/>
+<ellipse cx="260" cy="136" rx="24" ry="7" fill="url(#glow)"/>
+</g>
+</g></svg>
