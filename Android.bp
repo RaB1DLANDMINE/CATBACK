@@ -1,0 +1,50 @@
+//
+// Copyright (C) 2026 petalOS
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// CATBACK, our android auto replacement. priv + platform cert so cars connect w/o a pile of popups
+android_app {
+    name: "Catback",
+
+    srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
+    asset_dirs: ["assets"],
+    manifest: "AndroidManifest.xml",
+
+    // AudioPolicy loopback is @SystemApi
+    platform_apis: true,
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    privapp_allowlist: "org.petal.catback.xml",
+
+    optimize: {
+        enabled: false,
+    },
+
+    // car app lib, we're the host side so only the binder stubs + model classes get used
+    static_libs: [
+        "androidx.car.app_app",
+    ],
+
+    required: [
+        "default-permissions-org.petal.catback.xml",
+        "CatbackFrameworkOverlay",
+    ],
+}
+
+prebuilt_etc {
+    name: "default-permissions-org.petal.catback.xml",
+    src: "default-permissions-org.petal.catback.xml",
+    sub_dir: "default-permissions",
+    system_ext_specific: true,
+}
+
+// pre-approves notif access, island + turn-by-turn are dead without it
+runtime_resource_overlay {
+    name: "CatbackFrameworkOverlay",
+    manifest: "overlay/AndroidManifest.xml",
+    resource_dirs: ["overlay/res"],
+    product_specific: true,
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 petalOS
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- colon separated, add more here if anything else ever wants it -->
+    <string name="config_defaultListenerAccessPackages" translatable="false">org.petal.catback</string>
+</resources>

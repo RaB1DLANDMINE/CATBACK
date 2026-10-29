@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.petal.catback" android:sharedUserId="android.uid.system">
+    <permission android:name="org.petal.catback.INTERNAL" android:protectionLevel="signature" />
+    <uses-permission android:name="org.petal.catback.INTERNAL" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- wireless: bt WPP first then hop on the car's wifi -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES"
+        android:usesPermissionFlags="neverForLocation" />
+    <!-- car bg is the wallpaper, android gates it to hell. rom build just uses READ_WALLPAPER_INTERNAL -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_WALLPAPER_INTERNAL" />
+    <!-- priv only: car wifi joins w/o the "connect to this network?" nag -->
+    <uses-permission android:name="android.permission.COMPANION_APPROVE_WIFI_CONNECTIONS" />
+    <!-- priv only: no usb accessory permission popup -->
+    <uses-permission android:name="android.permission.MANAGE_USB" />
+    <!-- priv only: loopback audio policy, all phone media to the car w/o su or the screen cast prompt -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_ROUTING" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+    <!-- car app lib apps let in any host holding this. nothing defines it on a phone so we do, signature so nobody else gets it -->
+    <permission android:name="android.car.permission.TEMPLATE_RENDERER" android:protectionLevel="signature" />
+    <uses-permission android:name="android.car.permission.TEMPLATE_RENDERER" />
+    <!-- platform cert stuff for running phone apps on a hidden display in the car window -->
+    <uses-permission android:name="android.permission.ADD_TRUSTED_DISPLAY" />
+    <uses-permission android:name="android.permission.ADD_ALWAYS_UNLOCKED_DISPLAY" />
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT" />
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+    <uses-permission android:name="android.permission.INJECT_EVENTS" />
+    <!-- closing a car window kills the app for real: force-stop + never in the phone's own recents -->
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
+    <uses-permission android:name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
+    <!-- drawer lists every launcher app now -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <!-- cdm association so the car's bt can wake us -->
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND" />
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_START_FOREGROUND_SERVICES_FROM_BACKGROUND" />
+    <uses-permission android:name="android.permission.REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE" />
+    <uses-feature android:name="android.software.companion_device_setup" android:required="false" />
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false" />
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
+    <uses-feature android:name="android.hardware.usb.accessory" android:required="false" />
+    <!-- 11+ package visibility for the pickers, gearhead so we can rip the identity from an installed copy -->
+    <queries>
+        <package android:name="com.google.android.projection.gearhead" />
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="geo" />
+        </intent>
+        <intent>
+            <action android:name="android.media.browse.MediaBrowserService" />
+        </intent>
+        <intent>
+            <action android:name="androidx.media3.session.MediaSessionService" />
+        </intent>
+        <intent>
+            <action android:name="androidx.media3.session.MediaLibraryService" />
+        </intent>
+        <intent>
+            <action android:name="androidx.car.app.CarAppService" />
+        </intent>
+    </queries>
+    <application android:label="CATBACK" android:icon="@drawable/ic_catback"
+        android:theme="@android:style/Theme.Material.NoActionBar"
+        android:allowBackup="false" android:dataExtractionRules="@xml/backup_rules" android:supportsRtl="true">
+        <activity android:name=".MainActivity" android:exported="true"
+            android:launchMode="singleTop" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
+            </intent-filter>
+            <meta-data android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+                android:resource="@xml/accessory_filter" />
+        </activity>
+        <service android:name=".ProjectionService" android:exported="false"
+            android:foregroundServiceType="connectedDevice|mediaProjection" />
+        <service android:name=".HeadUnitPresenceService" android:exported="true"
+            android:permission="android.permission.BIND_COMPANION_DEVICE_SERVICE">
+            <intent-filter>
+                <action android:name="android.companion.CompanionDeviceService" />
+            </intent-filter>
+        </service>
+        <service android:name=".car.PetalNotificationListener" android:exported="true"
+            android:label="Car display notifications"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <!-- androidx CarConnection reads this, projecting = apps go "use the car screen" -->
+        <provider android:name=".car.CarConnectionProvider" android:authorities="androidx.car.app.connection"
+            android:exported="true" />
+        <receiver android:name=".CarConnectionReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
